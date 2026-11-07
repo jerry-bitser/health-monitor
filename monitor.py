@@ -1,10 +1,11 @@
+import os
 import sqlite3
 import time
 from datetime import datetime, timezone
 
 import requests
 
-DB_FILE = "monitor.db"
+DB_FILE = os.environ.get("DB_FILE", "monitor.db")
 
 URLS = [
     "https://www.google.com",
